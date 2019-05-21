@@ -23,7 +23,7 @@ public class Raid {
     @JsonIgnore
     @ManyToMany
     @JoinTable(
-            name = "pirate_raid",
+            name = "pirate_raids",
             joinColumns = { @JoinColumn(
                     name = "raid_id",
                     nullable = false,
@@ -42,6 +42,9 @@ public class Raid {
         this.pirates = new ArrayList<>();
     }
 
+    public Raid() {
+    }
+
     public String getLocation() {
         return location;
     }
@@ -57,4 +60,25 @@ public class Raid {
     public void setLoot(int loot) {
         this.loot = loot;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public List<Pirate> getPirates() {
+        return pirates;
+    }
+
+    public void setPirates(List<Pirate> pirates) {
+        this.pirates = pirates;
+    }
+
+    public void addPirate(Pirate pirate) {
+        pirates.add(pirate);
+    }
+
 }

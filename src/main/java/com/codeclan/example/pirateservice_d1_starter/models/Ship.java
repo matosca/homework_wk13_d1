@@ -28,6 +28,9 @@ public class Ship {
         this.pirates = new ArrayList<>();
     }
 
+    public Ship() {
+    }
+
     public String getName() {
         return name;
     }

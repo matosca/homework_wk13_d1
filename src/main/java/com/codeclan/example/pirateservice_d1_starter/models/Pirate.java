@@ -95,4 +95,17 @@ public class Pirate {
     public void setShip(Ship ship) {
         this.ship = ship;
     }
+
+    public List<Raid> getRaids() {
+        return raids;
+    }
+
+    public void setRaids(List<Raid> raids) {
+        this.raids = raids;
+    }
+
+    public void addRaid(Raid raid) {
+        raids.add(raid);
+    }
+
 }

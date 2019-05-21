@@ -38,6 +38,7 @@ public class PirateserviceD1StarterApplicationTests {
 		shipRepository.save(ship);
 
 		Pirate jack = new Pirate("Jack", "Sparrow", 32, ship);
+		jack.addRaid(raid);
 		pirateRepository.save(jack);
 	}
 
